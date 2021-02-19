@@ -9,7 +9,23 @@ html(lang="en")
     title Portfolio | main page
   body
     .wrapper
-      .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+      header.header
+        .header__logo
+          .logo ВК
+        .header__menu
+          - var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
+          nav.menu
+            ul.menu__list
+              each item in menu
+                li.menu__item
+                  a.menu__link #{item}
+        .header__socials
+          - var icons = ["insta", "vk", "github"]
+          ul.socials
+            each item in icons
+              li.socials__item
+                a.socials__link(href="#")
+                  +icon(item, "socials__icon")
+
+
+
