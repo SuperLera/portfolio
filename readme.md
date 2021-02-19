@@ -7,7 +7,8 @@
 ##  Чтобы развернуть проект необходимо:
 ```sh
 $ git clone https://github.com/SuperLera/portfolio.git
-$ yarn
+$ cd portfolio
+$ yarn / npm i
 ```
 
 ## Скрипты package.json:
