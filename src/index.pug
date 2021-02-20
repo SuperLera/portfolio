@@ -13,19 +13,30 @@ html(lang="en")
         .header__logo
           .logo ВК
         .header__menu
+          ul.socials
+            each social in [{title: "insta", link: "https://www.instagram.com"}, {title: "vk", link: "https://vk.com/valeriia_koroleva"}, {title: "github", link: "https://github.com/SuperLera"}]
+              li.socials__item
+                a(class=`socials__link socials__link--${social.title}` href=`${social.link}` target="_blank")
+                  +icon(social.title, "socials__icon")
+
+        .header__socials
           - var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
           nav.menu
             ul.menu__list
               each item in menu
                 li.menu__item
                   a.menu__link #{item}
-        .header__socials
-          - var icons = ["insta", "vk", "github"]
-          ul.socials
-            each item in icons
-              li.socials__item
-                a.socials__link(href="#")
-                  +icon(item, "socials__icon")
+
+      main.main
+        .welcome-section
+          section.hero.fullscreen-section
+            .hero__content
+              .user-info
+                .user-info__desc Личный сайт <br>веб-разработчика
+                .user-info__name Валерия Королева
+            .hero__navigation
+              a.scroll-btn Скролл
+          section.about
 
 
 
