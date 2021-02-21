@@ -62,7 +62,61 @@ html(lang="en")
                 .about__username Валерия Королева
                 .about__description Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                 .about__ps Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-
-
+        section.skills
+          .container
+            .skills__info
+              h3.title.skills__info-title Чем я могу быть полезна
+              .skills__info-subtitle Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            .skills__content
+              -
+                var items = [
+                  ["Frontend", ["HTML5+CSS3", "JS(ES5+)", "Vue.js", "React/Redux"]],
+                  ["Backend", ["NodeJS", "Express.js", "MongoDB", "GraphQL"]],
+                  ["Workflow", ["Git", "Npm/Yarn", "Webpack", "Gulp"]]
+                ]
+              ul.skills-graphic
+                each row in items
+                  li.skills-graphic__item
+                    .skills-row
+                      .skills-row__title #{row[0]}
+                      .skills-row__content
+                        ul.competences
+                          each competence in row[1]
+                            li.competences__item
+                              .competence
+                                svg.competence__circle
+                                  .competence__title #{competence}
+        section.works
+          .container
+            h2.title.works__title Мои Работы
+            .works__content
+              .slider
+                .slider__display
+                  img.slider__display-pic
+                  .slider__display-thumbs
+                    ul.slider-thumbs
+                      li.slider-thumbs__item
+                        a.slider-thumbs__link(href="#")
+                          img.slider-thumbs__pic
+                      li.slider-thumbs__item
+                        a.slider-thumbs__link(href="#")
+                          img.slider-thumbs__pic
+                      li.slider-thumbs__item
+                        a.slider-thumbs__link(href="#")
+                          img.slider-thumbs__pic
+                  .slider__display-buttons
+                    button.direction-btn.direction-btn--prev
+                    button.direction-btn.direction-btn--next
+                .slider__info
+                  .slider__info-tags
+                    ul.tags
+                      li.tags__item Html
+                      li.tags__item Css
+                      li.tags__item Javascript
+                  .slider__info-description
+                    h3.title.slider__info-title Сайт школы образования
+                    .slider__info-text Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 5 месяцев только самых тяжелых испытаний и бессонных ночей!
+                  .slider__info-link
+                    a.iconed-link Посмотреть сайт
 
 
