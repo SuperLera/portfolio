@@ -15,11 +15,11 @@ html(lang="en")
             .logo ВК
           .header__menu
             - var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
-            nav.menu
-              ul.menu__list
+            nav.nav
+              ul.nav__list
                 each item in menu
-                  li.menu__item
-                    a.menu__link #{item}
+                  li.nav__item
+                    a.nav__link #{item}
           .header__socials
             ul.socials
               each social in [{title: "insta", link: "https://www.instagram.com"}, {title: "vk", link: "https://vk.com/valeriia_koroleva"}, {title: "github", link: "https://github.com/SuperLera"}]
@@ -33,13 +33,13 @@ html(lang="en")
             .container.hero__container
               .hero__content
                 .user-info
-                  .user-info__desc Личный сайт <br>веб-разработчика
-                  .user-info__name Валерия Королева
+                  h1.user-info__desc Личный сайт <br>веб-разработчика
+                  .user-info__name Валерия <br>Королева
               .hero__navigation
-                a.scroll-btn Скролл
+                a.hero__navigation-btn Листай
           section.about
             .container.about__container
-              .about__left
+              .about__image
                 .user
                   .user__avatar
                     .avatar
@@ -56,17 +56,17 @@ html(lang="en")
                       each row in rows
                         tr.user__data-row
                           each cell in row
-                            td #{cell}
-              .about__right
-                .about__hello Привет, меня зовут
-                .about__username Валерия Королева
-                .about__description Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                .about__ps Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+                            td.user__data-cell #{cell}
+              .about__info
+                p.about__hello Привет, меня зовут
+                h2.about__username Валерия Королева
+                p.about__description Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p.about__ps Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
         section.skills
           .container
             .skills__info
               h3.title.skills__info-title Чем я могу быть полезна
-              .skills__info-subtitle Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+              p.skills__info-subtitle Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
             .skills__content
               -
                 var items = [
@@ -78,7 +78,7 @@ html(lang="en")
                 each row in items
                   li.skills-graphic__item
                     .skills-row
-                      .skills-row__title #{row[0]}
+                      h4.skills-row__title #{row[0]}
                       .skills-row__content
                         ul.competences
                           each competence in row[1]
@@ -115,7 +115,7 @@ html(lang="en")
                       li.tags__item Javascript
                   .slider__info-description
                     h3.title.slider__info-title Сайт школы образования
-                    .slider__info-text Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 5 месяцев только самых тяжелых испытаний и бессонных ночей!
+                    p.slider__info-text Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 5 месяцев только самых тяжелых испытаний и бессонных ночей!
                   .slider__info-link
                     a.iconed-link Посмотреть сайт
 

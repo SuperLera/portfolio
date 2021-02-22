@@ -1,7 +1,12 @@
 {
   "text-color": "#414c63",
+  "main-color": "#5500f2",
   "links-color": "#4b6fd7",
   "errors-color": "#cd1515",
+  "errors-color2": "#b13333",
+  "success-color": "4bb133",
+  "warning-color": "b18333",
+  "footer-color": "#1f232d",
   "bp-desktop-hd": "1800px",
   "bp-desktop": "1200px",
   "bp-tablets": "768px",

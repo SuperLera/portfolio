@@ -1,0 +1,24 @@
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav__item {
+  margin-right: 60px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.nav__link {
+  padding: 10px 0 20px;
+  border-bottom: 2px solid transparent;
+  transition: .2s ease;
+
+    &:hover {
+    color: $main-color;
+    border-bottom-color: $main-color;
+    transition: .2s ease;
+  }
+}
