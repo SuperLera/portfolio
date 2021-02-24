@@ -21,12 +21,7 @@ html(lang="en")
                   li.nav__item
                     a.nav__link #{item}
           .header__socials
-            ul.socials
-              each social in [{title: "insta", link: "https://www.instagram.com"}, {title: "vk", link: "https://vk.com/valeriia_koroleva"}, {title: "github", link: "https://github.com/SuperLera"}]
-                li.socials__item
-                  a(class=`socials__link socials__link--${social.title}` href=`${social.link}` target="_blank")
-                    +icon(social.title, "socials__icon")
-
+            +socials('header')
       main.main
         .welcome-section
           section.hero.fullscreen-section
@@ -43,7 +38,7 @@ html(lang="en")
                 .user
                   .user__avatar
                     .avatar
-                      +image("content/user.jpg", "user pic", "avatar__image")
+                      +image("content/user.jpg", "avatar__image", "фото разработчика")
                   .user__text
                     -
                       var rows = [
