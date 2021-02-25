@@ -24,63 +24,67 @@ html(lang="en")
             +socials('header')
       main.main
         .welcome-section
-          section.hero.fullscreen-section
+          section.hero.fullscreen-section#hero
             .container.hero__container
               .hero__content
                 .user-info
                   h1.user-info__desc Личный сайт <br>веб-разработчика
                   .user-info__name Валерия <br>Королева
               .hero__navigation
-                a.hero__navigation-btn Листай
-          section.about
+                a.hero__navigation-btn(href="#about") Листай
+          section.about#about
             .container.about__container
-              .about__image
-                .user
-                  .user__avatar
-                    .avatar
-                      +image("content/user.jpg", "avatar__image", "фото разработчика")
-                  .user__text
-                    -
-                      var rows = [
-                        ["Проживаю", "Москва"],
-                        ["Возраст", "30 лет"],
-                        ["Опыт разработки", "1 год"]
-                      ]
+              .about__user
+                .about__avatar
+                  .avatar
+                    +image("content/user.jpg", "avatar__image", "фото разработчика")
+                .about__data
+                  -
+                    var rows = [
+                      ["Проживаю:", "Москва"],
+                      ["Возраст:", "30 лет"],
+                      ["Опыт разработки:", "1 год"]
+                    ]
 
-                    table.user__data
-                      each row in rows
-                        tr.user__data-row
-                          each cell in row
-                            td.user__data-cell #{cell}
+                  table.about__table
+                    each row in rows
+                      tr.about__table-row
+                        each cell in row
+                          td.about__table-cell #{cell}
               .about__info
-                p.about__hello Привет, меня зовут
-                h2.about__username Валерия Королева
-                p.about__description Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                p.about__ps Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-        section.skills
-          .container
+                p.text.about__hello Привет, меня зовут
+                h2.title.about__username Валерия Королева
+                p.text.about__description Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p.text.about__ps Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        section.skills#skills
+          .container.skills__container
             .skills__info
-              h3.title.skills__info-title Чем я могу быть полезна
-              p.skills__info-subtitle Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+              h3.title.skills__info-title Чем я могу быть вам полезна
+              p.text.skills__info-text Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
             .skills__content
               -
                 var items = [
-                  ["Frontend", ["HTML5+CSS3", "JS(ES5+)", "Vue.js", "React/Redux"]],
-                  ["Backend", ["NodeJS", "Express.js", "MongoDB", "GraphQL"]],
-                  ["Workflow", ["Git", "Npm/Yarn", "Webpack", "Gulp"]]
+                  ["Frontend", ["HTML5 CSS3", "JS(ES5+)", "Vue.js", "React Redux"]],
+                  ["Backend", ["NodeJS", "Express.js", "MongoDB"]],
+                  ["Workflow", ["Git", "Npm Yarn", "Webpack", "Gulp"]]
                 ]
               ul.skills-graphic
                 each row in items
                   li.skills-graphic__item
                     .skills-row
-                      h4.skills-row__title #{row[0]}
+                      h4.title.skills-row__title #{row[0]}
                       .skills-row__content
                         ul.competences
                           each competence in row[1]
                             li.competences__item
                               .competence
-                                svg.competence__circle
-                                  .competence__title #{competence}
+                                svg(viewBox="0 0 100 100").competence__image
+                                  circle(cx="50" cy="50" r="40").competence__circle.competence__circle--under
+                                  circle(cx="50" cy="50" r="40" ref="color-circle" stroke="url(#gradient)" transform="rotate(180 50 50)").competence__circle.competence__circle--above
+                                  linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
+                                    stop(offset="0%" stop-color="#9300e8")
+                                    stop(offset="100%" stop-color="#4a00ed")
+                                .competence__title #{competence}
         section.works
           .container
             h2.title.works__title Мои Работы
