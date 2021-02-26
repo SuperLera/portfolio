@@ -85,37 +85,44 @@ html(lang="en")
                                     stop(offset="0%" stop-color="#9300e8")
                                     stop(offset="100%" stop-color="#4a00ed")
                                 .competence__title #{competence}
-        section.works
-          .container
+        section.works#works
+          .container.works__container
             h2.title.works__title Мои Работы
             .works__content
               .slider
                 .slider__display
-                  img.slider__display-pic
+                  .slider__display-main
+                    +image("content/works/1.jpg", "slider__image", "скриншот страницы проекта")
                   .slider__display-thumbs
                     ul.slider-thumbs
                       li.slider-thumbs__item
-                        a.slider-thumbs__link(href="#")
-                          img.slider-thumbs__pic
+                        button(type="button" aria-label="мини слайдер").slider-thumbs__button
+                          +image("content/works/2.jpg", "slider-thumbs__image", "миниатюра страницы проекта")
                       li.slider-thumbs__item
-                        a.slider-thumbs__link(href="#")
-                          img.slider-thumbs__pic
+                        button(type="button" aria-label="мини слайдер").slider-thumbs__button
+                          +image("content/works/3.jpg", "slider-thumbs__image", "миниатюра страницы проекта")
                       li.slider-thumbs__item
-                        a.slider-thumbs__link(href="#")
-                          img.slider-thumbs__pic
+                        button(type="button" aria-label="мини слайдер").slider-thumbs__button
+                          +image("content/works/4.jpg", "slider-thumbs__image", "миниатюра страницы проекта")
+                      li.slider-thumbs__item
+                        button(type="button" aria-label="мини слайдер").slider-thumbs__button
+                          +image("content/works/5.jpg", "slider-thumbs__image", "миниатюра страницы проекта")
                   .slider__display-buttons
-                    button.direction-btn.direction-btn--prev
-                    button.direction-btn.direction-btn--next
-                .slider__info
-                  .slider__info-tags
-                    ul.tags
-                      li.tags__item Html
-                      li.tags__item Css
-                      li.tags__item Javascript
-                  .slider__info-description
-                    h3.title.slider__info-title Сайт школы образования
-                    p.slider__info-text Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 5 месяцев только самых тяжелых испытаний и бессонных ночей!
-                  .slider__info-link
-                    a.iconed-link Посмотреть сайт
+                    button(type="button" aria-label="следующий слайд").direction-btn.direction-btn--prev
+                      +icon("arrow-down", "arrow arrow--next")
+                    button(type="button" aria-label="предыдущий слайд").direction-btn.direction-btn--next
+                      +icon("arrow-down", "arrow arrow--prev")
+                .slider__content
+                  .slider__counter 2
+                  .slider__desc
+                    ul.slider__tags
+                      li.slider__tags-item Html
+                      li.slider__tags-item Css
+                      li.slider__tags-item Javascript
+                    .slider__info
+                      h3.title.slider__info-title Сайт школы образования
+                      p.text.slider__info-text Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 5 месяцев только самых тяжелых испытаний и бессонных ночей!
+                    .slider__link
+                      a(href="#" target="_blank").iconed-link Посмотреть сайт
 
 
