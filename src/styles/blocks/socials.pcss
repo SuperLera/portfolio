@@ -4,14 +4,30 @@
 
 .socials__item {
   margin-right: 15px;
+  transition: 0.3s ease;
 
   &:last-child {
     margin-right: 0;
   }
 
   &--footer {
-    border: 1px solid black;
+    border: 1px solid rgba($text-color, 0.5);
     border-radius: 50%;
+    transition: 0.3s ease;
+
+      &:hover {
+        border-color: $main-color;
+        opacity: 1;
+        transition: 0.3s ease;
+      }
+  }
+
+  &:hover {
+    .socials__icon {
+        fill: $main-color;
+        opacity: 1;
+        transition: 0.3s ease;
+    }
   }
 }
 
@@ -23,27 +39,12 @@
 }
 
 .socials__icon {
-
-  transition: fill .2s ease;
-
-  &--header {
-    width: 25px;
-    height: 25px;
-    fill: $text-color;
-
-      &:hover {
-      fill: $main-color;
-      }
-  }
+  transition: 0.3s ease;
+  width: 25px;
+  height: 25px;
+  fill: $text-color;
 
   &--footer {
-    width: 20px;
-    height: 20px;
-    fill: red;
-    opacity: 0.3;
-
-      &:hover {
-      fill: blue;
-      }
+    opacity: 0.5;
   }
 }

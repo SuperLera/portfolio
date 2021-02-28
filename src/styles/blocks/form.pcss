@@ -1,0 +1,135 @@
+.form__container {
+  padding-bottom: 165px;
+}
+
+.form__title {
+  margin-bottom: 95px;
+}
+
+.form__box {
+  width: 80%;
+}
+
+.form__row{
+  margin-bottom: 60px;
+  display: flex;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--doubled .form__label{
+    width: 50%;
+    margin-right: 90px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+  }
+}
+
+.form__label {
+  width: 100%;
+  position: relative;
+  transition: 0.3s ease;
+
+    &:hover {
+      .form__input {
+        border-bottom-color: $main-color;
+        transition: 0.3s ease;
+      }
+
+      .form__icon {
+        fill: $main-color;
+        transition: 0.3s ease;
+      }
+    }
+}
+
+
+.form__input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgba($text-color, 0.5);
+  background: none;
+  outline: none;
+  padding: 20px 45px;
+  color: $text-color;
+  font-size: 18px;
+  font-weight: 700;
+  transition: 0.3s ease;
+
+    &:focus, &:active {
+      border-bottom-color: $main-color;
+      transition: 0.3s ease;
+
+        + .form__icon {
+          fill: $main-color;
+          transition: 0.3s ease;
+
+            &--textarea {
+              bottom: 42px;
+              transition: 0.3s ease;
+            }
+        }
+        ~ .form__hint {
+          bottom: 55px;
+          transition: 0.3s ease;
+
+            &--textarea {
+              bottom: 75px;
+              transition: 0.3s ease;
+            }
+        }
+    }
+}
+
+.form__input--textarea{
+  resize: none;
+
+    &.form__input--filled ~ .form__hint {
+      bottom: 75px;
+    }
+
+    &.form__input--filled ~ .form__icon {
+      bottom: 42px;
+    }
+}
+
+.form__icon {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  fill: rgba($text-color, 0.5);
+  transition: 0.3s ease;
+}
+
+.form__hint {
+  font-weight: 600;
+  padding-left: 45px;
+  position: absolute;
+  bottom: 18px;
+}
+
+.form__input--filled ~ .form__hint {
+  bottom: 55px;
+}
+
+.form__button {
+  width: 347px;
+  height: 80px;
+  color: #fff;
+  border-radius: 40px 10px 40px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  background-image: $gradient-color;
+
+  &:hover {
+    border-radius: 10px 40px 10px 40px;
+    transition: 0.3s ease;
+  }
+}
