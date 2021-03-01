@@ -24,17 +24,17 @@
   margin-right: 40px;
   position: relative;
 
-    &:after {
-      content: "";
-      width: 590px;
-      height: 700px;
-      position: absolute;
-      bottom: 0;
-      left: -600px;
-      background-image: url("../images/content/bg/backpack.png");
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
+  &::after {
+    content: "";
+    width: 590px;
+    height: 700px;
+    position: absolute;
+    bottom: 0;
+    left: -600px;
+    background-image: url("../images/content/bg/backpack.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }
 
 .skills__row-title {
@@ -58,9 +58,9 @@
 .skills__item {
   margin-right: 40px;
 
-    &:last-child {
-      margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .skills__wrapper {

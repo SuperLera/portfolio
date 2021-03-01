@@ -10,7 +10,7 @@
   width: 80%;
 }
 
-.form__row{
+.form__row {
   margin-bottom: 60px;
   display: flex;
 
@@ -18,13 +18,13 @@
     margin-bottom: 0;
   }
 
-  &--doubled .form__label{
+  &--doubled .form__label {
     width: 50%;
     margin-right: 90px;
 
-      &:last-child {
-        margin-right: 0;
-      }
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -33,15 +33,15 @@
   position: relative;
   transition: $trans-hover;
 
-    &:hover {
-      .form__input {
-        border-bottom-color: $main-color;
-      }
-
-      .form__icon {
-        fill: $main-color;
-      }
+  &:hover {
+    .form__input {
+      border-bottom-color: $main-color;
     }
+
+    .form__icon {
+      fill: $main-color;
+    }
+  }
 }
 
 
@@ -57,37 +57,38 @@
   font-weight: 700;
   transition: $trans-hover;
 
-    &:focus, &:active {
-      border-bottom-color: $main-color;
+  &:focus,
+  &:active {
+    border-bottom-color: $main-color;
 
-        + .form__icon {
-          fill: $main-color;
+    + .form__icon {
+      fill: $main-color;
 
-            &--textarea {
-              bottom: 42px;
-            }
-        }
-        ~ .form__hint {
-          bottom: 55px;
-
-            &--textarea {
-              bottom: 75px;
-            }
-        }
+      &--textarea {
+        bottom: 42px;
+      }
     }
+    ~ .form__hint {
+      bottom: 55px;
+
+      &--textarea {
+        bottom: 75px;
+      }
+    }
+  }
 }
 
-.form__input--textarea{
+.form__input--textarea {
   resize: none;
   transition: $trans-hover;
 
-    &.form__input--filled ~ .form__hint {
-      bottom: 75px;
-    }
+  &.form__input--filled ~ .form__hint {
+    bottom: 75px;
+  }
 
-    &.form__input--filled ~ .form__icon {
-      bottom: 42px;
-    }
+  &.form__input--filled ~ .form__icon {
+    bottom: 42px;
+  }
 }
 
 .form__icon {
