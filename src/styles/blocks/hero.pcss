@@ -1,0 +1,79 @@
+.hero__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__content {
+  padding-top: 20%;
+}
+
+.hero__desc {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgba(70, 77, 98, 0.4);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.67;
+}
+
+.hero__name {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 0.83;
+  text-align: center;
+}
+
+.hero__navigation {
+  padding-bottom: 10%;
+  font-weight: 600;
+}
+
+.hero__navigation-btn {
+  position: relative;
+  transition: $trans-hover;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 18px;
+      width: 20px;
+      height: 20px;
+      background: svg-load('scroll.svg', fill=$text-color, width=100%, height=100%);
+      animation: bounce 1.5s infinite cubic-bezier(0.02, 0.76, 0.91, 0.94);
+      transition: $trans-hover;
+    }
+
+    &:hover {
+      color: $main-color;
+
+        &::after {
+          background: svg-load('scroll.svg', fill=$main-color, width=100%, height=100%);
+          // animation-iteration-count: 0;
+        }
+    }
+}
+
+@keyframes bounce {
+  0%,
+  40%,
+  80% {
+    transform: translateY(0);
+  }
+
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+
+  70% {
+    transform: translateY(-15px);
+  }
+}

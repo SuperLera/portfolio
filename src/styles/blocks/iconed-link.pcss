@@ -1,0 +1,28 @@
+.iconed-link {
+  color: $links-color;
+  font-size: 18px;
+  font-weight: bold;
+  transition: $trans-hover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    transition: $trans-hover;
+    background: svg-load('link.svg', fill=$links-color, width=100%, height=100%);
+  }
+
+  &:hover {
+    color: $main-color;
+      &:before {
+        background: svg-load('link.svg', fill=$main-color, width=100%, height=100%);
+    }
+  }
+}

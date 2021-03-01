@@ -1,0 +1,20 @@
+section.form#form
+  .container.form__container
+    h2.title.form__title Связаться со мной
+    form.form__box
+      .form__row.form__row--doubled
+        label.form__label(for="name")
+          input.form__input(name="name", type="text", id="name", required)
+          +icon('user', 'form__icon')
+          .text.form__hint Введите ваше имя
+        label.form__label(for="email")
+          input.form__input(name="email", type="email", id="email", required)
+          +icon('envelope', 'form__icon')
+          .text.form__hint Введите ваш email
+      .form__row
+        label.form__label(for="comment")
+          textarea.form__input.form__input--textarea(name="comment", id="comment", required)
+          +icon('message', 'form__icon form__icon--textarea')
+          .text.form__hint.form__hint--textarea Сообщение к письму
+      .form__row
+        button.form__button(type="submit" value="Отправить") Отправить

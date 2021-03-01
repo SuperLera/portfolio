@@ -1,0 +1,22 @@
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav__item {
+  margin-right: 60px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.nav__link {
+  padding: 10px 0 20px;
+  border-bottom: 2px solid transparent;
+  transition: $trans-hover;
+
+    &:hover {
+    color: $main-color;
+  }
+}
