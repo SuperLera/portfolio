@@ -6,198 +6,20 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    title Portfolio | main page
+    title Портфолио | Главная
   body
     .wrapper
-      header.header
-        .container.header__container
-          .header__logo
-            .logo ВК
-          .header__menu
-            - var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
-            nav.nav
-              ul.nav__list
-                each item in menu
-                  li.nav__item
-                    a.nav__link #{item}
-          .header__socials
-            +socials('header')
+      include ./components/header.pug
       main.main
         .welcome
-          section.hero.fullscreen-section#hero
-            .container.hero__container
-              .hero__content
-                .user-info
-                  h1.user-info__desc Личный сайт <br>веб-разработчика
-                  .user-info__name Валерия <br>Королева
-              .hero__navigation
-                a.hero__navigation-btn(href="#about") Листай
-          section.about#about
-            .container.about__container
-              .about__user
-                .about__avatar
-                  +image("content/user.jpg", "about__avatar-image", "фото разработчика")
-                .about__data
-                  -
-                    var rows = [
-                      ["Проживаю:", "Москва"],
-                      ["Возраст:", "30 лет"],
-                      ["Опыт разработки:", "1 год"]
-                    ]
-
-                  table.about__table
-                    each row in rows
-                      tr.about__table-row
-                        each cell in row
-                          td.about__table-cell #{cell}
-              .about__info
-                p.text.about__hello Привет, меня зовут
-                h2.title.about__username Валерия Королева
-                p.text.about__description Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                p.text.about__ps Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-        section.skills#skills
-          .container.skills__container
-            .skills__info
-              h3.title.skills__info-title Чем я могу быть вам полезна
-              p.text.skills__info-text Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-            .skills__content
-              -
-                var items = [
-                  ["Frontend", ["HTML5 CSS3", "JS(ES5+)", "Vue.js", "React Redux"]],
-                  ["Backend", ["NodeJS", "Express.js", "MongoDB"]],
-                  ["Workflow", ["Git", "Npm Yarn", "Webpack", "Gulp"]]
-                ]
-              ul.skills-graphic
-                each row in items
-                  li.skills-graphic__item
-                    .skills-row
-                      h4.title.skills-row__title #{row[0]}
-                      .skills-row__content
-                        ul.competences
-                          each competence in row[1]
-                            li.competences__item
-                              .competence
-                                svg(viewBox="0 0 100 100").competence__image
-                                  circle(cx="50" cy="50" r="40").competence__circle.competence__circle--under
-                                  circle(cx="50" cy="50" r="40" ref="color-circle" stroke="url(#gradient)" transform="rotate(180 50 50)").competence__circle.competence__circle--above
-                                  linearGradient(id="gradient" x1="0%" y1="0%" x2="100%" y2="0")
-                                    stop(offset="0%" stop-color="#9300e8")
-                                    stop(offset="100%" stop-color="#4a00ed")
-                                .competence__title #{competence}
-        section.works#works
-          .container.works__container
-            h2.title.works__title Мои Работы
-            .works__content
-              .slider
-                .slider__display
-                  .slider__display-main
-                    +image("content/works/1.jpg", "slider__image", "скриншот страницы проекта")
-                  .slider__display-thumbs
-                    ul.slider-thumbs
-                      li.slider-thumbs__item
-                        button(type="button" aria-label="мини слайдер").slider-thumbs__button.slider-thumbs__button--active
-                          +image("content/works/1.jpg", "slider-thumbs__image", "миниатюра страницы проекта")
-                      li.slider-thumbs__item
-                        button(type="button" aria-label="мини слайдер").slider-thumbs__button
-                          +image("content/works/2.jpg", "slider-thumbs__image", "миниатюра страницы проекта")
-                      li.slider-thumbs__item
-                        button(type="button" aria-label="мини слайдер").slider-thumbs__button
-                          +image("content/works/3.jpg", "slider-thumbs__image", "миниатюра страницы проекта")
-                      li.slider-thumbs__item
-                        button(type="button" aria-label="мини слайдер").slider-thumbs__button
-                          +image("content/works/5.jpg", "slider-thumbs__image", "миниатюра страницы проекта")
-                  .slider__display-buttons
-                    button(type="button" aria-label="следующий слайд").slider__button
-                      +icon("arrow-down", "arrow arrow--next")
-                    button(type="button" aria-label="предыдущий слайд").slider__button
-                      +icon("arrow-down", "arrow arrow--prev")
-                .slider__content
-                  .slider__counter 2
-                  .slider__desc
-                    ul.slider__tags
-                      li.slider__tags-item Html
-                      li.slider__tags-item Css
-                      li.slider__tags-item Javascript
-                    .slider__info
-                      h3.title.slider__info-title Сайт школы образования
-                      p.text.slider__info-text Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 5 месяцев только самых тяжелых испытаний и бессонных ночей!
-                    .slider__link
-                      a(href="#" target="_blank").iconed-link Посмотреть сайт
+          include ./components/hero.pug
+          include ./components/about.pug
+        include ./components/skills.pug
+        include ./components/works.pug
         .buddha
-          section.reviews#reviews
-            .container.reviews__container
-              .reviews__nav
-                h2.title.reviews__title Что обо мне говорят
-                .reviews__buttons
-                  button(type="button" aria-label="следующий отзыв").reviews__button
-                    +icon("arrow-down", "arrow arrow--prev")
-                  button(type="button" aria-label="предыдущий отзыв").reviews__button
-                    +icon("arrow-down", "arrow")
-              .reviews__slider
-                ul.reviews__list
-                  li.reviews__item
-                    .text.reviews__text
-                      p Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! Пять месяцев только самых тяжелых испытаний и бессонных ночей!
-                    .reviews__user
-                      .reviews__user-avatar
-                        +image("content/reviews/dima.png", "reviews__user-image", "фото пользователя в отзывах")
-                      .reviews__user-info
-                        .reviews__user-name Дмитрий Ковальчук
-                        .text.reviews__user-post Основатель Loftschool
-                  li.reviews__item
-                    .text.reviews__text
-                      p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах.
-                    .reviews__user
-                      .reviews__user-avatar
-                        +image("content/reviews/vova.png", "reviews__user-image reviews__user-image--vova", "фото пользователя в отзывах")
-                      .reviews__user-info
-                        .reviews__user-name Владимир Сабанцев
-                        .text.reviews__user-post Главный преподаватель
-          section.form#form
-            .container.form__container
-              h2.title.form__title Связаться со мной
-              form.form__box
-                .form__row.form__row--doubled
-                  label.form__label(for="name")
-                    input.form__input(name="name", type="text", id="name", required)
-                    +icon('user', 'form__icon')
-                    .text.form__hint Введите ваше имя
-                  label.form__label(for="email")
-                    input.form__input(name="email", type="email", id="email", required)
-                    +icon('envelope', 'form__icon')
-                    .text.form__hint Введите ваш email
-                .form__row
-                  label.form__label(for="comment")
-                    textarea.form__input.form__input--textarea(name="comment", id="comment", required)
-                    +icon('message', 'form__icon form__icon--textarea')
-                    .text.form__hint.form__hint--textarea Сообщение к письму
-                .form__row
-                  button.form__button(type="submit" value="Отправить") Отправить
-      footer.footer
-        .container.footer__container
-          .footer__author
-            .footer__copywrite &copy; 2021
-            .footer__title
-              .footer__title-name Валерия Королева
-              .text.footer__title-desc Личный сайт <br>веб разработчика
-          .footer__content
-            .footer__nav
-              - var menu = ["Главная", "Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"]
-              nav.nav
-                ul.nav__list
-                  each item in menu
-                    li.nav__item
-                      a.nav__link #{item}
-            .footer__info
-              .footer__info-column
-                .text.footer__text
-                  p Этот сайт я сделала в рамках обучения в школе онлайн образования Loftschool
-                .footer__socials
-                  +socials("footer")
-              .footer__info-column
-                .text.footer__text
-                  p Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает где вы живете
-                .footer__quote-author Martin Golding
+          include ./components/reviews.pug
+          include ./components/form.pug
+      include ./components/footer.pug
 
 
 

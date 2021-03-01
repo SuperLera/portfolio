@@ -47,8 +47,6 @@
 
 .slider-thumbs__item {
   width: 176px;
-  // position: relative;
-  transition: 0.2s ease;
 
   &:last-child {
     display: none;
@@ -59,6 +57,7 @@
   height: 100%;
   width: 100%;
   position: relative;
+  transition: $trans-hover;
 
   &::before {
     content: "";
@@ -70,6 +69,7 @@
     // background-color: transparent;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 10;
+    transition: $trans-hover;
   }
 
 
@@ -86,7 +86,6 @@
   &:hover {
     &::before {
       background-color: rgba($main-color, 0.4);
-      transition: 0.3s ease;
       z-index: 10;
     }
   }
@@ -129,12 +128,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.3s ease;
+  transition: $trans-hover;
   // cursor: pointer;
 
     &:hover, &:active , &:focus {
       background-color: $main-color;
-      transition: 0.3s ease;
       outline: none;
     }
 

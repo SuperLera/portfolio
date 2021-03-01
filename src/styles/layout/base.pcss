@@ -40,7 +40,7 @@ body {
 
 .fullscreen-section {
   height: 100vh;
-  min-height: 650px;
+  min-height: 320px;
 }
 
 button {
@@ -102,4 +102,28 @@ img {
   font-weight: 600;
   text-align: left;
   line-height: 1.88;
+}
+
+.arrow {
+  width: 15px;
+  height: 15px;
+  transition: $trans-hover;
+
+  &--prev {
+    transform: rotate(180deg);
+  }
+}
+
+.welcome {
+  background: url("../images/content/bg/welcome.png");
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(0% 0%, 0% 92%, 50% 100%, 100% 92%, 100% 0%);
+}
+
+.buddha {
+  background: url("../images/content/bg/buddha.jpg");
+  background-position: center;
+  background-size: cover;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 50% 8%);
 }

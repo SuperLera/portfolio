@@ -14,9 +14,4 @@ mixin image(path, className, description, attrRole)
 //- 2. Если не нужен role, но нужен alt, просто опускаем четверный аргумент:
 //- +image(‘path/file.png’, 'class’, ‘Описание’)
 
-mixin socials(mod)
-  ul(class='socials socials--' + mod)
-    each social in [{title: "insta", link: "https://www.instagram.com"}, {title: "vk", link: "https://vk.com/valeriia_koroleva"}, {title: "github", link: "https://github.com/SuperLera"}]
-      li(class='socials__item socials__item--' + mod)
-        a(class=`socials__link socials__link--${social.title}` href=`${social.link}` target="_blank")
-          +icon(social.title, `socials__icon socials__icon--${mod}`)
+

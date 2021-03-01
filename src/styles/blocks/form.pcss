@@ -31,17 +31,15 @@
 .form__label {
   width: 100%;
   position: relative;
-  transition: 0.3s ease;
+  transition: $trans-hover;
 
     &:hover {
       .form__input {
         border-bottom-color: $main-color;
-        transition: 0.3s ease;
       }
 
       .form__icon {
         fill: $main-color;
-        transition: 0.3s ease;
       }
     }
 }
@@ -57,28 +55,23 @@
   color: $text-color;
   font-size: 18px;
   font-weight: 700;
-  transition: 0.3s ease;
+  transition: $trans-hover;
 
     &:focus, &:active {
       border-bottom-color: $main-color;
-      transition: 0.3s ease;
 
         + .form__icon {
           fill: $main-color;
-          transition: 0.3s ease;
 
             &--textarea {
               bottom: 42px;
-              transition: 0.3s ease;
             }
         }
         ~ .form__hint {
           bottom: 55px;
-          transition: 0.3s ease;
 
             &--textarea {
               bottom: 75px;
-              transition: 0.3s ease;
             }
         }
     }
@@ -86,6 +79,7 @@
 
 .form__input--textarea{
   resize: none;
+  transition: $trans-hover;
 
     &.form__input--filled ~ .form__hint {
       bottom: 75px;
@@ -103,7 +97,7 @@
   bottom: 18px;
   left: 0;
   fill: rgba($text-color, 0.5);
-  transition: 0.3s ease;
+  transition: $trans-hover;
 }
 
 .form__hint {
@@ -111,6 +105,7 @@
   padding-left: 45px;
   position: absolute;
   bottom: 18px;
+  transition: $trans-hover;
 }
 
 .form__input--filled ~ .form__hint {
@@ -125,11 +120,10 @@
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  transition: 0.3s ease;
+  transition: $trans-hover;
   background-image: $gradient-color;
 
   &:hover {
     border-radius: 10px 40px 10px 40px;
-    transition: 0.3s ease;
   }
 }
