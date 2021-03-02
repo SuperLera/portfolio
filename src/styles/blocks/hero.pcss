@@ -13,6 +13,10 @@
     display: flex;
     padding-top: 20%;
   }
+
+  @include desktop {
+    flex-direction: column;
+  }
 }
 
 .hero__desc {
@@ -27,6 +31,12 @@
     text-align: right;
     margin-right: 60px;
   }
+
+  @include desktop {
+    text-align: center;
+    margin-right: 0;
+    font-size: 16px;
+  }
 }
 
 .hero__name {
@@ -37,6 +47,11 @@
 
   @include desktopHd {
     text-align: left;
+  }
+
+  @include desktop {
+    text-align: center;
+    font-size: 55px;
   }
 }
 

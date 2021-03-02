@@ -9,9 +9,4 @@ mixin image(path, className, description, attrRole)
   else
     img(src=require(`images/${path}`).default class=className alt=description)
 
-//- 1. Если нужен role, а не alt:
-//- +image(‘path/file.png’, 'class’, ‘’, ‘presentation’)
-//- 2. Если не нужен role, но нужен alt, просто опускаем четверный аргумент:
-//- +image(‘path/file.png’, 'class’, ‘Описание’)
-
 
