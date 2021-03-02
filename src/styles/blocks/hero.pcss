@@ -8,6 +8,11 @@
 
 .hero__content {
   padding-top: 15%;
+
+  @include desktopHd {
+    display: flex;
+    padding-top: 20%;
+  }
 }
 
 .hero__desc {
@@ -17,6 +22,11 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 1.67;
+
+  @include desktopHd {
+    text-align: right;
+    margin-right: 60px;
+  }
 }
 
 .hero__name {
@@ -24,6 +34,10 @@
   font-weight: 800;
   line-height: 0.83;
   text-align: center;
+
+  @include desktopHd {
+    text-align: left;
+  }
 }
 
 .hero__navigation {
