@@ -1,11 +1,23 @@
 .slider {
   display: flex;
   justify-content: space-between;
+
+  @include desktop{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .slider__display {
   flex-basis: 60%;
   position: relative;
+
+  @include desktop{
+    // width: 92%;
+    padding: 0 30px;
+    margin-bottom: 55px;
+  }
 }
 
 .slider__display-main {
@@ -24,6 +36,14 @@
   overflow: hidden;
   bottom: 9%;
   right: 0;
+
+  @include desktop{
+    right: 82px;
+  }
+
+  @include tablets{
+    height: 84px;
+  }
 }
 
 .slider-thumbs {
@@ -36,6 +56,14 @@
 
   @include desktopHd {
     &:last-child {
+      display: none;
+    }
+  }
+
+  @include tablets {
+    width: 140px;
+
+    &:nth-child(3) {
       display: none;
     }
   }
@@ -102,6 +130,10 @@
   right: -52px;
   bottom: 9%;
   z-index: 1;
+
+  @include desktop{
+    right: 30px;
+  }
 }
 
 .slider__button {
@@ -112,6 +144,11 @@
   justify-content: center;
   align-items: center;
   transition: $trans-hover;
+
+  @include tablets {
+    width: 52px;
+    height: 42px;
+  }
 
   &:hover,
   &:active,
@@ -141,6 +178,14 @@
     padding-left: 140px;
     padding-right: 20px;
   }
+
+  @include desktop{
+    padding: 0 20%;
+  }
+
+  @include tablets{
+    padding: 0 15%;
+  }
 }
 
 .slider__counter {
@@ -156,6 +201,19 @@
   @include desktopHd {
     font-size: 300px;
     top: -4.75rem;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.slider__desc {
+  @include desktop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -182,6 +240,15 @@
   }
 }
 
+.slider__info {
+  @include desktop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .slider__info-title {
   font-size: 30px;
   line-height: 1.6;
@@ -189,6 +256,14 @@
 
   @include desktopHd {
     margin-bottom: 30px;
+  }
+
+  @include desktop {
+    font-size: 26px;
+  }
+
+  @include tablets {
+    font-size: 24px;
   }
 }
 
@@ -202,5 +277,13 @@
     margin-bottom: 30px;
     padding-right: 10%;
   }
+
+  @include desktop {
+    padding: 0;
+    text-align: center;
+    padding: 0 10%;
+  }
 }
+
+
 

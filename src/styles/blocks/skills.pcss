@@ -4,19 +4,48 @@
   flex-direction: column;
   align-items: center;
 
+  @include desktop {
+    padding: 110px 90px 0;
+  }
+
+  @include tablets {
+    padding: 80px 30px 0;
+  }
+
 }
 
 .skills__info {
   margin-bottom: 95px;
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include tablets {
+    margin-bottom: 50px;
+  }
 }
 
 .skills__title {
-  font-size: 30px;
+  // font-size: 30px;
   margin-bottom: 40px;
+
+  @include desktop {
+    width: 270px;
+    text-align: center;
+    line-height: 1.2;
+  }
 }
 
 .skills__text {
   width: 565px;
+  @include desktop {
+    width: 460px;
+    text-align: center;
+  }
 }
 
 .skills__content {
@@ -25,13 +54,22 @@
   // margin-right: 40px;
   position: relative;
 
+  @include desktopHd {
+    margin-left: 27%;
+  }
+
+  @include desktop {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   &::after {
     content: "";
     width: 590px;
     height: 700px;
     position: absolute;
     bottom: 0;
-    left: -600px;
+    left: -550px;
     background-image: url("../images/content/bg/backpack.png");
     background-position: center center;
     background-repeat: no-repeat;
@@ -45,6 +83,10 @@
 .skills__row-title {
   font-size: 24px;
   margin-bottom: 20px;
+
+  @include desktop {
+   font-size: 18px;
+  }
 }
 
 .skills__block {
@@ -53,25 +95,66 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+}
+
+.skills__row {
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
 }
 
 .skills__list {
   display: flex;
   flex-wrap: wrap;
+
+  @include tablets {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .skills__item {
   margin-right: 40px;
 
-  &:last-child {
-    margin-right: 0;
+  @include desktopHd {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include desktop {
+    margin-right: 20px;
+  }
+
+  @include tablets {
+    &:last-child {
+      margin-right: 20px;
+    }
   }
 }
+
+
 
 .skills__wrapper {
   width: 135px;
   height: 135px;
   position: relative;
+
+  @include desktop {
+    width: 112px;
+    height: 112px;
+   }
 }
 
 .skills__circle {
@@ -99,4 +182,8 @@
   font-weight: bold;
   line-height: 1.67;
   text-align: center;
+
+  @include desktop {
+    font-size: 15px;
+   }
 }

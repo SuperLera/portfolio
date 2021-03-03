@@ -7,6 +7,14 @@
   padding: 80px 0;
   display: flex;
   justify-content: space-between;
+
+  @include desktop {
+    padding: 60px 0;
+  }
+
+   @include tablets {
+    padding: 50px 0;
+  }
 }
 
 .footer__author {
@@ -17,6 +25,14 @@
   @include desktopHd {
     flex-direction: column;
     flex-basis: 20%;
+  }
+
+  @include desktop {
+    margin-right: 60px;
+  }
+
+  @include tablets {
+    margin-right: 30px;
   }
 }
 
@@ -53,11 +69,23 @@
 
 .footer__nav {
   margin-bottom: 70px;
+
+  @include desktop {
+    margin-bottom: 20px;
+  }
+
+  @include tablets {
+    margin-bottom: 10px;
+  }
 }
 
 .footer__info {
   display: flex;
   justify-content: space-between;
+
+  @include desktop {
+    flex-direction: column;
+  }
 
 }
 
@@ -66,6 +94,19 @@
 
   @include desktopHd {
     margin-right: 35px;
+  }
+
+  @include desktop {
+    margin-right: 0;
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include tablets {
+    margin-bottom: 30px;
   }
 
   &:last-child {
@@ -77,6 +118,10 @@
   opacity: 0.3;
   font-weight: normal;
   margin-bottom: 30px;
+
+  @include desktop {
+    margin-bottom: 20px;
+  }
 }
 
 .footer__quote-author {

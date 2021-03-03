@@ -7,6 +7,15 @@
   @include desktop {
     padding: 130px 50px 150px;
   }
+
+  @include tablets {
+    padding: 100px 20px 110px;
+  }
+
+  @include phones {
+    padding: 40px 0 100px;
+    flex-direction: column;
+  }
 }
 
 .about__user {
@@ -15,6 +24,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @include phones {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 }
 
 .about__avatar {
@@ -28,6 +42,10 @@
     width: 170px;
     height: 170px;
     margin-bottom: 60px;
+  }
+
+  @include desktop {
+    margin-bottom: 30px;
   }
 }
 
@@ -49,6 +67,9 @@
     @include desktop {
       padding-left: 30px;
     }
+    @include phones {
+      padding-left: 40px;
+    }
   }
 
   @include desktop {
@@ -58,6 +79,14 @@
 
 .about__info {
   width: 55%;
+
+  @include tablets {
+    width: 50%;
+  }
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .about__hello {
@@ -67,6 +96,10 @@
 .about__username {
   margin-bottom: 45px;
   line-height: 1.33;
+
+  @include phones {
+    margin-bottom: 30px;
+  }
 }
 
 .about__description {

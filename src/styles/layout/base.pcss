@@ -128,6 +128,18 @@ img {
   background-position: center;
   background-size: cover;
   clip-path: polygon(0% 0%, 0% 92%, 50% 100%, 100% 92%, 100% 0%);
+
+  @include desktopHd {
+    clip-path: polygon(0% 0%, 0% 93%, 50% 100%, 100% 93%, 100% 0%);
+  }
+
+  @include desktop {
+    clip-path: polygon(0% 0%, 0% 95%, 50% 100%, 100% 95%, 100% 0%);
+  }
+
+  @include phones {
+    clip-path: polygon(0% 0%, 0% 98%, 50% 100%, 100% 98%, 100% 0%);
+  }
 }
 
 .buddha {
@@ -135,4 +147,12 @@ img {
   background-position: center;
   background-size: cover;
   clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 50% 8%);
+
+  @include desktopHd {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 50% 6%);
+  }
+
+  @include desktop {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%, 50% 5%);
+  }
 }

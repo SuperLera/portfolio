@@ -17,6 +17,14 @@
   @include desktop {
     flex-direction: column;
   }
+
+  @include tablets {
+    padding-top: 30%;
+  }
+
+  @include phones {
+    padding-top: 50%;
+  }
 }
 
 .hero__desc {
@@ -37,6 +45,10 @@
     margin-right: 0;
     font-size: 16px;
   }
+
+  @include phones {
+    font-size: 14px;
+  }
 }
 
 .hero__name {
@@ -53,11 +65,23 @@
     text-align: center;
     font-size: 55px;
   }
+
+  @include phones {
+    font-size: 36px;
+  }
 }
 
 .hero__navigation {
   padding-bottom: 8%;
   font-weight: 600;
+
+  @include tablets {
+    padding-bottom: 10%;
+  }
+  @include phones {
+    padding-bottom: 15%;
+    font-size: 15px;
+  }
 }
 
 .hero__navigation-btn {
