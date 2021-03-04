@@ -9,8 +9,8 @@
   "warning-color": "b18333",
   "footer-color": "#1f232d",
   "bp-desktop-hd": "1800px",
-  "bp-desktop": "1023px",
-  "bp-tablets": "768px",
+  "bp-desktop": "1200px",
+  "bp-tablets": "767px",
   "bp-phones": "480px",
   "trans-hover": "0.3s ease"
 }

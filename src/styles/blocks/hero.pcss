@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @include tablets {
+  @include desktop {
     justify-content: center;
   }
 }
@@ -20,17 +20,20 @@
 
   @include desktop {
     flex-direction: column;
+    padding-top: 0;
+
   }
 
   @include tablets {
-    padding-top: 0;
-    padding-bottom: 10%;
+    flex-direction: row;
   }
 
-  // @include phones {
-  //   padding-top: 50%;
-  // }
+  @include phones {
+    flex-direction: column;
+    padding-bottom: 30%;
+  }
 }
+
 
 .hero__desc {
   text-align: center;
@@ -48,7 +51,18 @@
   @include desktop {
     text-align: center;
     margin-right: 0;
-    font-size: 16px;
+  }
+
+  @include tablets {
+    text-align: right;
+    margin-right: 40px;
+    font-size: 15px;
+  }
+
+  @include phones {
+    text-align: center;
+    margin-right: 0;
+    font-size: 14px;
   }
 }
 
@@ -64,11 +78,17 @@
 
   @include desktop {
     text-align: center;
-    font-size: 55px;
+    font-size: 60px;
+  }
+
+  @include tablets {
+    text-align: left;
+    font-size: 50px;
   }
 
   @include phones {
     font-size: 44px;
+    text-align: center;
   }
 }
 
@@ -76,7 +96,7 @@
   padding-bottom: 8%;
   font-weight: 600;
 
-  @include tablets {
+  @include desktop {
     display: none;
   }
 }

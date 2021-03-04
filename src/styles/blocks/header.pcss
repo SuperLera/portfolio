@@ -3,6 +3,10 @@
   width: 100%;
   z-index: 1;
   padding: 50px 0;
+
+  @include desktop {
+    padding: 40px 0;
+  }
 }
 
 .header__container {
@@ -23,10 +27,16 @@
   }
 }
 
+.header__socials {
+  @include phones {
+    display: none;
+  }
+}
+
 .header__mobile-menu {
   display: none;
 
-  @include tablets {
+  @include desktop {
     display: block;
   }
 }
