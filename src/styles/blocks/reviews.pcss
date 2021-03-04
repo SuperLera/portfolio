@@ -11,6 +11,10 @@
     padding-top: 180px;
     padding-right: 0;
   }
+
+  @include phones {
+    padding-top: 80px;
+  }
 }
 
 .reviews__nav {
@@ -20,6 +24,13 @@
   @include desktop {
     margin-bottom: 60px;
   }
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
 }
 
 .reviews__title {
@@ -27,6 +38,12 @@
 
   @include desktop {
     margin-right: 40px;
+  }
+
+  @include phones {
+    margin-right: 0;
+    margin-bottom: 25px;
+    text-align: center;
   }
 }
 
@@ -88,6 +105,16 @@
     padding-left: 35px;
     margin-right: 40px;
     width: 45%;
+  }
+
+  @include phones {
+    padding-left: 45px;
+    width: 100%;
+    margin-right: 0;
+
+    &:last-child {
+      display: none;
+    }
   }
 
   &:last-child {

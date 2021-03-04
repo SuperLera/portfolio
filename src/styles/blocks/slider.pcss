@@ -22,6 +22,10 @@
   @include phones{
     padding: 0;
   }
+
+  @include phones {
+    margin-bottom: 30px;
+  }
 }
 
 .slider__display-main {
@@ -204,6 +208,10 @@
   @include tablets{
     padding: 0 15%;
   }
+
+  @include phones {
+    padding: 0;
+  }
 }
 
 .slider__counter {
@@ -233,6 +241,10 @@
     justify-content: center;
     align-items: center;
   }
+
+  @include phones{
+    align-items: flex-start;
+  }
 }
 
 .slider__tags {
@@ -241,6 +253,11 @@
 
   @include desktopHd {
     margin-bottom: 30px;
+  }
+
+  @include phones {
+    font-size: 14px;
+    margin-bottom: 20px;
   }
 }
 
@@ -265,6 +282,10 @@
     justify-content: center;
     align-items: center;
   }
+
+  @include phones {
+    align-items: flex-start;
+  }
 }
 
 .slider__info-title {
@@ -283,6 +304,11 @@
   @include tablets {
     font-size: 24px;
   }
+
+  @include phones {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
 }
 
 .slider__info-text {
@@ -297,9 +323,14 @@
   }
 
   @include desktop {
-    padding: 0;
     text-align: center;
     padding: 0 10%;
+  }
+
+  @include phones {
+    padding: 0;
+    text-align: left;
+    margin-bottom: 20px;
   }
 }
 
