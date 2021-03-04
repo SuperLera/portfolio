@@ -12,6 +12,9 @@
     padding: 80px 30px 0;
   }
 
+  @include phones {
+    padding: 50px 0 0;
+  }
 }
 
 .skills__info {
@@ -38,6 +41,10 @@
     text-align: center;
     line-height: 1.2;
   }
+  @include phones {
+    width: 80%;
+    margin-bottom: 30px;
+  }
 }
 
 .skills__text {
@@ -45,6 +52,10 @@
   @include desktop {
     width: 460px;
     text-align: center;
+  }
+
+  @include phones {
+    width: 100%;
   }
 }
 
@@ -142,6 +153,13 @@
       margin-right: 20px;
     }
   }
+
+  @include phones {
+    margin-right: 0;
+      &:last-child {
+        margin-right: 0;
+    }
+  }
 }
 
 
@@ -169,6 +187,10 @@
     stroke-width: 8px;
     stroke-dasharray: 251;
     stroke-dashoffset: 100;
+
+    @include tablets {
+      stroke-width: 10px;
+    }
   }
 }
 

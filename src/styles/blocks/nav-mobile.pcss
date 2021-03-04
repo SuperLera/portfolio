@@ -1,0 +1,46 @@
+.nav-mobile {
+  display: flex;
+  padding: 0 10px;
+  height: 50px;
+  z-index: 9999;
+  align-items: center;
+}
+
+.nav-mobile__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 30px;
+  transition: .3s;
+  z-index: 2;
+}
+
+.nav-mobile__icon {
+  display: block;
+  position: relative;
+  background: rgba($text-color, 1);
+  width: 90%;
+  height: 4px;
+  transition: .3s;
+  // box-shadow: 0 0 5px $text-color;
+
+  &::after,
+  &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background: rgba($text-color, 1);
+      width: 100%;
+      height: 4px;
+      transition: .3s;
+      // box-shadow: 0 0 5px $text-color;
+  }
+  &::after {
+    top: 8px;
+  }
+  &::before {
+    top: -8px;
+  }
+}

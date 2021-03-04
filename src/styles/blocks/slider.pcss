@@ -18,6 +18,10 @@
     padding: 0 30px;
     margin-bottom: 55px;
   }
+
+  @include phones{
+    padding: 0;
+  }
 }
 
 .slider__display-main {
@@ -43,6 +47,10 @@
 
   @include tablets{
     height: 84px;
+  }
+
+  @include phones{
+    display: none;
   }
 }
 
@@ -134,6 +142,11 @@
   @include desktop{
     right: 30px;
   }
+
+  @include phones {
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .slider__button {
@@ -148,6 +161,11 @@
   @include tablets {
     width: 52px;
     height: 42px;
+  }
+
+  @include phones {
+    width: 52px;
+    height: 52px;
   }
 
   &:hover,
