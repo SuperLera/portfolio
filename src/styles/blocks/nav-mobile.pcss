@@ -13,7 +13,7 @@
   justify-content: center;
   width: 35px;
   height: 30px;
-  transition: .3s;
+  transition: 0.3s;
   z-index: 2;
 
   &.active ~ {
@@ -31,17 +31,17 @@
       background: transparent;
       &::before,
       &::after {
-          top: 0;
-          background: $text-color;
-          box-shadow: 0 0 5px $text-color;
+        top: 0;
+        background: $text-color;
+        box-shadow: 0 0 5px $text-color;
       }
       &::after {
-      transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
       }
       &::before {
-      transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
       }
     }
   }
@@ -53,20 +53,19 @@
   background: rgba($text-color, 1);
   width: 90%;
   height: 4px;
-  transition: .3s;
+  transition: 0.3s;
 
   &::after,
   &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: rgba($text-color, 1);
-      width: 75%;
-      height: 4px;
-      transition: .3s;
-      // box-shadow: 0 0 5px $text-color;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba($text-color, 1);
+    width: 75%;
+    height: 4px;
+    transition: 0.3s;
   }
   &::after {
     top: 8px;
@@ -88,8 +87,8 @@
   height: 100%;
   width: 40%;
   background-color: #fff;
-  transition: .5s;
-  transition-delay: .2s;
+  transition: 0.5s;
+  transition-delay: 0.2s;
   color: $text-color;
   font-weight: 600;
 
@@ -99,8 +98,8 @@
 }
 
 .nav-mobile__list {
-  transition: .5s;
-  transition-delay: .5s;
+  transition: 0.5s;
+  transition-delay: 0.5s;
   margin-bottom: 5%;
   padding-left: 12px;
 }
