@@ -1,26 +1,79 @@
 .form__container {
-  padding-bottom: 165px;
+  padding: 220px 750px 165px 0;
+
+  @include desktopHd {
+    padding: 200px 30% 165px 0;
+  }
+
+  @include desktop {
+    padding: 120px 30px 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include phones {
+    padding: 120px 0 110px;
+  }
 }
 
 .form__title {
   margin-bottom: 95px;
+
+  @include desktop {
+    margin-bottom: 60px;
+  }
 }
 
 .form__box {
-  width: 80%;
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .form__row {
   margin-bottom: 60px;
   display: flex;
+  width: 100%;
+  align-items: center;
+
+  @include desktop {
+    margin-bottom: 40px;
+    justify-content: center;
+  }
 
   &:last-child {
     margin-bottom: 0;
   }
 
+  &--doubled {
+    @include phones {
+      flex-direction: column;
+    }
+  }
+
   &--doubled .form__label {
     width: 50%;
     margin-right: 90px;
+
+    @include desktop {
+      margin-right: 30px;
+    }
+
+    @include phones {
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
     &:last-child {
       margin-right: 0;

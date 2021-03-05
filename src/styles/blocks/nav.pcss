@@ -6,8 +6,16 @@
 .nav__item {
   margin-right: 60px;
 
+  @include desktopHd {
+    margin-right: 44px;
+  }
+
   &:last-child {
     margin-right: 0;
+  }
+
+  @include desktop {
+    margin-bottom: 30px;
   }
 }
 

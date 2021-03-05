@@ -2,7 +2,20 @@
   display: flex;
   justify-content: space-between;
   max-width: 990px;
-  padding: 170px 0 210px;
+  padding: 130px 0 150px;
+
+  @include desktop {
+    padding: 130px 50px 100px;
+  }
+
+  @include tablets {
+    padding: 100px 20px;
+  }
+
+  @include phones {
+    padding: 40px 0 100px;
+    flex-direction: column;
+  }
 }
 
 .about__user {
@@ -11,6 +24,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @include phones {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 }
 
 .about__avatar {
@@ -19,6 +37,16 @@
   margin-bottom: 80px;
   border-radius: 50%;
   overflow: hidden;
+
+  @include desktop {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 60px;
+  }
+
+  @include desktop {
+    margin-bottom: 30px;
+  }
 }
 
 .about__avatar-image {
@@ -35,24 +63,52 @@
   &:last-child {
     padding-left: 60px;
     opacity: 1;
+
+    @include desktop {
+      padding-left: 30px;
+    }
+
+    @include phones {
+      padding-left: 40px;
+    }
+  }
+
+  @include desktop {
+    font-size: 15px;
   }
 }
 
 .about__info {
   width: 55%;
+
+  @include tablets {
+    width: 50%;
+  }
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .about__hello {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .about__username {
-  margin-bottom: 35px;
+  margin-bottom: 45px;
   line-height: 1.33;
+
+  @include phones {
+    margin-bottom: 30px;
+  }
 }
 
 .about__description {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+
+  @include desktop {
+    margin-bottom: 40px;
+  }
 }
 
 .about__ps {

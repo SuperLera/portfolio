@@ -4,11 +4,35 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  @include desktop {
+    justify-content: center;
+  }
 }
 
 .hero__content {
-  padding-top: 20%;
+  padding-top: 15%;
+
+  @include desktopHd {
+    display: flex;
+    padding-top: 20%;
+  }
+
+  @include desktop {
+    padding-top: 0;
+    padding-bottom: 10%;
+  }
+
+  @include tablets {
+    padding-bottom: 10%;
+  }
+
+  @include phones {
+    flex-direction: column;
+    padding-bottom: 30%;
+  }
 }
+
 
 .hero__desc {
   text-align: center;
@@ -17,6 +41,26 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 1.67;
+
+  @include desktopHd {
+    text-align: right;
+    margin-right: 60px;
+  }
+
+  @include desktop {
+    margin-right: 40px;
+  }
+
+  @include tablets {
+    margin-right: 40px;
+    font-size: 15px;
+  }
+
+  @include phones {
+    text-align: center;
+    margin-right: 0;
+    font-size: 14px;
+  }
 }
 
 .hero__name {
@@ -24,11 +68,32 @@
   font-weight: 800;
   line-height: 0.83;
   text-align: center;
+
+  @include desktopHd {
+    text-align: left;
+  }
+
+  @include desktop {
+    font-size: 60px;
+  }
+
+  @include tablets {
+    font-size: 50px;
+  }
+
+  @include phones {
+    font-size: 44px;
+    text-align: center;
+  }
 }
 
 .hero__navigation {
-  padding-bottom: 10%;
+  padding-bottom: 8%;
   font-weight: 600;
+
+  @include desktop {
+    display: none;
+  }
 }
 
 .hero__navigation-btn {

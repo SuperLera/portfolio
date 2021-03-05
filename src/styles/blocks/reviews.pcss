@@ -1,14 +1,50 @@
 .reviews__container {
-  padding: 220px 0;
+  padding-top: 220px;
+  padding-right: 18%;
+
+  @include desktopHd {
+    padding-top: 200px;
+    padding-right: 10%;
+  }
+
+  @include desktop {
+    padding-top: 130px;
+    padding-right: 0;
+  }
+
+  @include phones {
+    padding-top: 80px;
+  }
 }
 
 .reviews__nav {
   display: flex;
   margin-bottom: 95px;
+
+  @include desktop {
+    margin-bottom: 60px;
+  }
+
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
 }
 
 .reviews__title {
   margin-right: 75px;
+
+  @include desktop {
+    margin-right: 40px;
+  }
+
+  @include phones {
+    margin-right: 0;
+    margin-bottom: 25px;
+    text-align: center;
+  }
 }
 
 .reviews__buttons {
@@ -57,7 +93,29 @@
   padding-left: 75px;
   margin-right: 50px;
   position: relative;
-  width: 37%;
+  width: 40%;
+
+  @include desktop {
+    padding-left: 50px;
+    margin-right: 60px;
+    width: 43%;
+  }
+
+  @include tablets {
+    padding-left: 35px;
+    margin-right: 40px;
+    width: 45%;
+  }
+
+  @include phones {
+    padding-left: 45px;
+    width: 100%;
+    margin-right: 0;
+
+    &:last-child {
+      display: none;
+    }
+  }
 
   &:last-child {
     margin-right: 0;
@@ -72,6 +130,16 @@
     height: 59px;
     background: svg-load("quote.svg", fill=rgba($text-color, 0.1), width=100%, height=100%);
     background-repeat: no-repeat;
+
+    @include desktop {
+      width: 40px;
+      height: 35px;
+    }
+
+    @include tablets {
+      width: 30px;
+      height: 25px;
+    }
   }
 }
 
@@ -91,6 +159,13 @@
   border-radius: 50%;
   overflow: hidden;
   margin-right: 25px;
+
+  @include tablets {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    min-height: 55px;
+  }
 }
 
 .reviews__user-image {
@@ -114,4 +189,22 @@
 .reviews__user-name {
   font-size: 18px;
   font-weight: bold;
+
+  @include desktop {
+    font-size: 16px;
+  }
+
+  @include tablets {
+    font-size: 15px;
+  }
+}
+
+.reviews__user-post {
+  @include desktop {
+    font-size: 14px;
+  }
+
+  @include tablets {
+    font-size: 13px;
+  }
 }
